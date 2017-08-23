@@ -75,6 +75,14 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="calcular"
+                android:text="@string/calcular" />
+
+            <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,13 +90,6 @@
                 android:onClick="borrar"
                 android:text="@string/borrar" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="calcular"
-                android:text="@string/calcular" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
