@@ -11,7 +11,65 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void sumaDeDosNumerosDeFormaCorrecta(){
+        double ve=4.0;
+        double vr = Metodos.sumar(2,2);
+
+        assertEquals(ve,vr,0);
     }
+
+    @Test
+    public void sumaDeDosNumerosDeFormaIncorrecta(){
+        double ve=4.0;
+        double vr = Metodos.sumar(1,2);
+
+        assertNotEquals(ve,vr,0);
+    }
+
+    @Test
+    public void restaDeDosNumerosDeFormaCorrecta(){
+        double ve=0;
+        double vr = Metodos.restar(2,2);
+
+        assertEquals(ve,vr,0);
+    }
+
+    @Test
+    public void restaDeDosNumerosDeFormaIncorrecta(){
+        double ve=1;
+        double vr = Metodos.restar(2,2);
+
+        assertNotEquals(ve,vr,0);
+    }
+
+    @Test
+    public void pasoDeParametrosDeFormaIncorrecta(){
+        double ve=1;
+        double vr = Metodos.restar(2,2);
+
+        assertNotEquals(ve,vr,0);
+    }
+
+  /*  @Test
+    public void denominadorDivisionIgualCero(){
+          boolean estado = Metodos.denominadorDivisionCero(0,3);
+          assertTrue(estado);
+    }*/
+
+
+    @Test(expected =IllegalArgumentException.class)
+    public void denominadorDivisionIgualCero(){
+        boolean estado = Metodos.denominadorDivisionCero(0,3);
+        assertTrue(estado);
+    }
+
+   /* @Test(timeout = 10)
+    public void pruebaLoopInfinito(){
+        boolean estado = Metodos.loppInfinito();
+        assertTrue(estado);
+    }*/
+
+
+
+
 }
